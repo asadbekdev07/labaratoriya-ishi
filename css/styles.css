@@ -28,36 +28,6 @@ body {
   color: #222222;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* AUTOFILL-STYLES */
-/*input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border-color: transparent;
-  -webkit-text-fill-color: inherit;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-}*/
-
-
-/* PLACEHOLDER-STYLES */
-/*::-webkit-input-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder,
-:-moz-placeholder {
-  color: rgba(52, 49, 61, 0.5);
-  opacity: 1;
-}*/
-
 
 /* VISUALLY-HIDDEN */
 .visually-hidden {
@@ -75,16 +45,138 @@ select:-webkit-autofill:focus {
 /* CONTAINER  */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* MAIN-CONTENT  */
-.main-content {
-  flex-grow: 1;
+.form__heading {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+.required-star {
+  color: red;
+  margin-left: 5px;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  background-color: #e7f1ff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.password-container .eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  background-color: #e7f1ff; 
+    border: 1px solid #ccc;   
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Hover va focus holatida rang o'zgarishi */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: #d0e5ff; 
+    border-color: #66afe9;    
+}
+
+
+.checkbox-group {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  min-height: 120px;
+  resize: vertical; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #e7f1ff; 
+    border: 1px solid #ccc;    
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  min-width: 200px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Yuborish tugmasi uchun */
+button[type="submit"] {
+  background-color: #007bff; 
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+/* Formani tozalash tugmasi uchun */
+button[type="reset"] {
+  background-color: #dc3545; 
+}
+
+button[type="reset"]:hover {
+  background-color: #c82333; 
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
 @media

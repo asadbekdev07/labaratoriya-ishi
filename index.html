@@ -1,15 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
 
-  <!-- STYLESHEETS -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<script src="js/main.js"></script>
-</body>
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="form__heading">Anketa Formasi</h2>
+      <form action="#" method="post" class="form">
+        <!-- Familiya -->
+        <label>Familiya<span class="required-star">*</span></label>
+        <input type="text" name="familiya" required />
+
+        <!-- Ism -->
+        <label>Ism<span class="required-star">*</span></label>
+        <input type="text" name="ism" required />
+
+        <!-- Sharif -->
+        <label>Sharif<span class="required-star">*</span></label>
+        <input type="text" name="sharif" required />
+
+        <!-- Email -->
+        <label>Email<span class="required-star">*</span></label>
+        <input type="email" name="email" required />
+
+        <!-- Tilni tanlash -->
+        <label>Tilni tanlang<span class="required-star">*</span></label>
+        <div class="checkbox-group">
+          <label
+            ><input type="checkbox" name="til" value="O'zbek" /> O'zbek</label
+          >
+          <label><input type="checkbox" name="til" value="Rus" /> Rus</label>
+          <label
+            ><input type="checkbox" name="til" value="Ingliz" /> Ingliz</label
+          >
+          <label><input type="checkbox" name="til" value="Arab" /> Arab</label>
+        </div>
+
+        <!-- Kasbni tanlash -->
+        <label>Kasbni tanlang<span class="required-star">*</span></label>
+        <select name="kasb" required>
+          <option value="" disabled selected>Kasbni tanlang...</option>
+          <option value="Dasturchi">Dasturchi</option>
+          <option value="O'qituvchi">O'qituvchi</option>
+          <option value="Talaba">Talaba</option>
+          <option value="Muhandis">Muhandis</option>
+          <option value="Tadbirkor">Tadbirkor</option>
+          <option value="Boshqa">Boshqa</option>
+        </select>
+
+        <!-- Parol -->
+        <label>Parol<span class="required-star">*</span></label>
+        <div class="password-container">
+          <input type="password" name="parol" id="parol" required />
+          <span class="eye-icon" id="togglePassword">&#128065;</span>
+        </div>
+
+        <label>Qo'shimcha axborot</label>
+        <textarea
+          name="qoshimcha"
+          rows="4"
+          placeholder="Ixtiyoriy izoh yoki qo‘shimcha ma’lumot..."
+        ></textarea>
+
+        <div class="buttons">
+          <button type="submit">Yuborish</button>
+          <button type="reset" class="clear">Formani tozalash</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
 </html>
